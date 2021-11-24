@@ -1,0 +1,9 @@
+on boot
+    mkdir /persist/westalgo
+    chown system system /persist/westalgo
+    chmon 0774 /persist/westalgo
+
+service zui-facsvc-hal-1-0 /vendor/bin/hw/vendor.zuifactool.hardware.facsvc@1.0-service
+    class hal
+    user system
+    group root system camera gps
